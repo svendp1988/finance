@@ -1,0 +1,21 @@
+language: java
+jdk:
+  - openjdk13
+addons:
+  sonarcloud:
+    organization: "svendp1988"
+    token: ${SONARCLOUD_TOKEN}
+before_script:
+  - chmod +x gradlew
+script:
+  - "./gradlew check"
+  - "./gradlew sonarqube"
+after_success:
+  - if [ -e ./gradlew ]; then ./gradlew jacocoTestReport;else gradle jacocoTestReport;fi
+  - bash <(curl -s https://codecov.io/bash)
+cache:
+  directories:
+    - '$HOME/.m2/repository'
+    - '$HOME/.sonar/cache'
+    - '$HOME/.gradle'
+    - '.gradle'
