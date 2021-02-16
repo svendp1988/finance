@@ -24,12 +24,11 @@ class ExpenseReaderTest {
 
     Path testInput = Path.of(System.getProperty("user.dir"), "src", "test", "resources", "test_expense_input.csv");
     Path errorPath = Path.of(System.getProperty("user.dir"), "src", "test", "resources", "test_error.log");
-
+    Path wrongPath = Path.of("wrong_path");
 
     @BeforeEach
     void setUp() throws IOException {
         Files.deleteIfExists(errorPath);
-        reader.setInputhPath(testInput);
         reader.setErrorPath(errorPath);
     }
 
@@ -40,15 +39,13 @@ class ExpenseReaderTest {
 
     @Test
     void readFile() {
-        List<String> input = reader.readFile();
+        List<String> input = reader.readFile(testInput);
         assertEquals(13, input.size());
     }
 
     @Test
     void handleError() {
-        Path wrongPath = Path.of("wrong_path");
-        reader.setInputhPath(wrongPath);
-        reader.readFile();
+        reader.readFile(wrongPath);
         assertTrue(Files.exists(errorPath));
     }
 }

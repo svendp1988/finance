@@ -1,10 +1,13 @@
 package be.sven.finance.model;
 
+import org.springframework.data.annotation.Id;
+
 import java.time.LocalDate;
 import java.util.Objects;
 import java.util.UUID;
 
 public class Expense {
+    @Id
     private String id;
     private final String accountNumber;
     private final String rubricName;

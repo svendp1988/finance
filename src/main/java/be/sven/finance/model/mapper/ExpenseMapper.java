@@ -40,21 +40,4 @@ public class ExpenseMapper {
                 .withFreeCommunication(null)
                 .build();
     }
-
-    public final DBObject toDBObject(Expense expense) {
-        return new BasicDBObject("_id", expense.getId())
-                .append("accountNumber", expense.getAccountNumber())
-                .append("rubricName", expense.getRubricName())
-                .append("name", expense.getName())
-                .append("coin", expense.getCoin())
-                .append("statementNumber", expense.getStatementNumber())
-                .append("date", Date.from(expense.getDate().atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()))
-                .append("description", expense.getDescription())
-                .append("amount", expense.getAmount())
-                .append("balance", expense.getBalance())
-                .append("accountCounterparty", expense.getAccountCounterparty())
-                .append("nameCounterParty", expense.getNameCounterparty())
-                .append("structuredCommunication", expense.getStructuredCommunication())
-                .append("freeCommunication", expense.getFreeCommunication());
-    }
 }
