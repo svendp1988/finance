@@ -29,6 +29,6 @@ public class FinanceApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         repository.deleteAll();
-        service.loadExpensesFromCsv(Path.of(System.getProperty("user.dir"), "src", "main", "resources", "BE45746031228489_30-09-2020_tot_14-02-2021.csv"));
+        service.loadExpensesFromCsv(Path.of(System.getProperty("user.dir"), "src", "main", "resources", "BE00123456789101_30-09-2020_tot_14-02-2021.csv"));
     }
 }
