@@ -29,8 +29,7 @@ public class ExpenseController {
     @ResponseBody
     public List<Expense> findAll() {
         LOGGER.info("Getting all expenses");
-        List<Expense> allExpenses = service.findAll();
-        return allExpenses;
+        return service.findAll();
     }
 
     @PostMapping("/expenses/start")

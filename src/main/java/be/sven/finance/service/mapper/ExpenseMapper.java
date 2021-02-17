@@ -17,7 +17,7 @@ public class ExpenseMapper {
     }
 
     public Expense toModel(String line) {
-        String[] modelProperties = new String[17];
+        String[] modelProperties = new String[20];
         System.arraycopy(line.split(";"), 0, modelProperties, 0, line.split(";").length);
         return expenseBuilder()
                 .withAccountNumber(modelProperties[0])
