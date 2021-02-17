@@ -1,4 +1,4 @@
-package be.sven.finance.model;
+package be.sven.finance.domain.model;
 
 import java.time.LocalDate;
 

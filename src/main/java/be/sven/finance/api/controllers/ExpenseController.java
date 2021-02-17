@@ -1,7 +1,7 @@
-package be.sven.finance.api;
+package be.sven.finance.api.controllers;
 
 import be.sven.finance.api.exceptions.ExpenseNotFoundException;
-import be.sven.finance.model.Expense;
+import be.sven.finance.domain.model.Expense;
 import be.sven.finance.service.ExpenseService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

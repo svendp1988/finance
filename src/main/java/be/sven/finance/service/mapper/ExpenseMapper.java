@@ -1,17 +1,12 @@
-package be.sven.finance.model.mapper;
+package be.sven.finance.service.mapper;
 
-import be.sven.finance.model.Expense;
-import com.mongodb.BasicDBObject;
-import com.mongodb.DBObject;
+import be.sven.finance.domain.model.Expense;
 import org.springframework.stereotype.Component;
 
-import java.time.Instant;
 import java.time.LocalDate;
-import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 
-import static be.sven.finance.model.ExpenseBuilder.expenseBuilder;
+import static be.sven.finance.domain.model.ExpenseBuilder.expenseBuilder;
 
 @Component
 public class ExpenseMapper {

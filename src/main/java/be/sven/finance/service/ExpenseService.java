@@ -1,9 +1,9 @@
 package be.sven.finance.service;
 
-import be.sven.finance.model.Expense;
-import be.sven.finance.model.mapper.ExpenseMapper;
-import be.sven.finance.model.reader.ExpenseReader;
-import be.sven.finance.model.repository.ExpenseRepository;
+import be.sven.finance.domain.model.Expense;
+import be.sven.finance.service.mapper.ExpenseMapper;
+import be.sven.finance.service.reader.ExpenseReader;
+import be.sven.finance.domain.repository.ExpenseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

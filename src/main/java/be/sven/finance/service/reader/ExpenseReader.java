@@ -1,4 +1,4 @@
-package be.sven.finance.model.reader;
+package be.sven.finance.service.reader;
 
 import org.springframework.stereotype.Component;
 

@@ -1,6 +1,6 @@
-package be.sven.finance.model.repository;
+package be.sven.finance.domain.repository;
 
-import be.sven.finance.model.Expense;
+import be.sven.finance.domain.model.Expense;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
