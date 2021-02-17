@@ -38,13 +38,13 @@ class ExpenseReaderTest {
     }
 
     @Test
-    void readFile() {
+    void readFile() throws IOException {
         List<String> input = reader.readFile(testInput);
         assertEquals(13, input.size());
     }
 
     @Test
-    void handleError() {
+    void handleError() throws IOException {
         reader.readFile(wrongPath);
         assertTrue(Files.exists(errorPath));
     }
